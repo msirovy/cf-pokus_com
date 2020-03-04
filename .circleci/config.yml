@@ -80,7 +80,4 @@ workflows:
       - plan:
           requires:
             - build
-      - apply:
-          requires:
-            - plan
 
