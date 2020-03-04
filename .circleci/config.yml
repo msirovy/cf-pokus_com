@@ -1,0 +1,14 @@
+version: 2.1
+
+jobs:
+ test: 
+    working_directory: ~/
+    docker:
+      - image: hashicorp/terraform:light
+    steps:
+      - run:    
+          name: Init
+          command: terraform init
+      - run:
+          name: Plan
+          command: terraform plan
